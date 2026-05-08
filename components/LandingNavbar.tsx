@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ScanLine, Printer, Monitor, Zap } from 'lucide-react';
+import { TitanCoreLogo } from './TitanCoreLogo';
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/#services' },
-  { label: 'Work', href: '/#work' },
+  { label: 'Works', href: '/#work' },
   { label: 'Insights', href: '/#insights' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -43,20 +44,11 @@ export default function LandingNavbar() {
 
       <div className={`border-b border-black/5 transition-all duration-300 ${scrolled ? 'bg-[rgba(255,250,244,0.95)] shadow-lg py-2' : 'bg-[rgba(255,250,244,0.92)] py-4'} backdrop-blur-xl`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
-              <Image
-                src="/logon.jpeg"
-                alt="TitanCore logo"
-                fill
-                sizes="48px"
-                priority
-                className="object-contain p-1.5"
-              />
-            </div>
+          <Link href="/" className="flex min-w-0 items-center gap-1" onClick={() => setMenuOpen(false)}>
+            <TitanCoreLogo compact markClassName="h-12 w-11" />
             <div className="min-w-0">
               <p className="truncate font-[family:var(--font-space-grotesk)] text-xl font-bold tracking-[-0.05em] text-[#0d1b2b]">
-                TitanCore
+                T I T A N C O R E
               </p>
               <p className="truncate text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#5b6778]">
                 The Power Behind Smart Business.
