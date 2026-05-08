@@ -4,7 +4,7 @@ import { Space_Grotesk } from 'next/font/google';
 import Image from 'next/image';
 import LandingNavbar from '@/components/LandingNavbar';
 import LandingFooter from '@/components/LandingFooter';
-import { ShieldCheck, Users, Truck, Heart } from 'lucide-react';
+import { ShieldCheck, Users, TrendingUp, Zap } from 'lucide-react';
 
 // Images
 import image1 from '@/public/landing/analytics-laptop.jpg';
@@ -65,9 +65,9 @@ export default function AboutPage() {
             <div className="mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { icon: ShieldCheck, title: 'Reliability', text: 'Systems that work as hard as you do.' },
-                { icon: Heart, title: 'Innovation', text: 'Future-proof technology for tomorrow.' },
+                { icon: Zap, title: 'Innovation', text: 'Future-proof technology for tomorrow.' },
                 { icon: Users, title: 'Partnership', text: 'Full-service support for every client.' },
-                { icon: Truck, title: 'Growth', text: 'Scaling your business with confidence.' },
+                { icon: TrendingUp, title: 'Growth', text: 'Scaling your business with confidence.' },
               ].map((val) => (
                 <div key={val.title} className="text-center">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f5efe7] text-[#c86c49]">

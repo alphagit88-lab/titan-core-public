@@ -82,10 +82,26 @@ const proofTags = [
 ];
 
 const overviewChecks = [
-  'POS Systems: Modern point-of-sale rollouts for smoother billing and cleaner reporting.',
-  'Software Development: Custom tools that turn repetitive workflows into streamlined digital systems.',
-  'Website Design & Build: Responsive sites with stronger structure and a more confident visual presence.',
-  'Digital Marketing: Campaign planning and performance-minded execution for business growth.',
+  {
+    title: 'POS Systems',
+    description: 'Modern point-of-sale rollouts for smoother billing and cleaner reporting.',
+    href: '/services/pos'
+  },
+  {
+    title: 'Software Development',
+    description: 'Custom tools that turn repetitive workflows into streamlined digital systems.',
+    href: '/services/software'
+  },
+  {
+    title: 'Website Design & Build',
+    description: 'Responsive sites with stronger structure and a more confident visual presence.',
+    href: '/services/web'
+  },
+  {
+    title: 'Digital Marketing',
+    description: 'Campaign planning and performance-minded execution for business growth.',
+    href: '/services/marketing'
+  },
 ];
 
 const statCards = [
@@ -387,6 +403,36 @@ export default function Home() {
 
         <section id="services" className="relative scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
+            {/* Introductory Principles */}
+            <div className="mb-24">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  { title: 'Business-first planning', text: 'Every recommendation starts with workflow pain points, adoption needs, and measurable priorities.' },
+                  { title: 'Responsive experiences', text: 'Interfaces stay sharp and usable across desktop, tablet, and mobile touchpoints.' },
+                  { title: 'Support after launch', text: 'TitanCore stays close with practical guidance, maintenance, and next-phase improvements.' },
+                ].map((item, idx) => (
+                  <div 
+                    key={item.title} 
+                    data-reveal="zoom"
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                    className="rounded-[2rem] border border-black/5 bg-white p-8 shadow-[0_12px_44px_rgba(17,32,51,0.04)] transition-all hover:shadow-[0_20px_60px_rgba(17,32,51,0.08)]"
+                  >
+                    <h3 className="text-lg font-bold text-[var(--landing-brand-strong)]">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[var(--landing-muted)]">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-24 text-center">
+                <h2 data-reveal="fade" className="mx-auto max-w-[22ch] font-[family:var(--font-space-grotesk)] text-5xl font-bold leading-[1.05] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-6xl md:text-7xl">
+                  A coordinated service mix for ambitious business teams.
+                </h2>
+                <p data-reveal="fade" className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-[var(--landing-muted)]">
+                  TitanCore's core offers are presented in a service-first grid that stays readable on mobile while opening up into a cleaner editorial layout on larger screens.
+                </p>
+              </div>
+            </div>
+
             <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div data-reveal="left" className="relative min-h-[520px] sm:min-h-[620px]">
                 <div className="absolute left-0 top-0 w-[62%] overflow-hidden rounded-[2rem] border border-black/6 bg-white shadow-[0_30px_80px_rgba(17,32,51,0.10)]">
@@ -429,29 +475,31 @@ export default function Home() {
               </div>
 
               <div data-reveal="right">
-                <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--landing-accent)]">
-                  The TitanCore standard
-                </p>
-                <h2 className="mt-4 max-w-[13ch] font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-5xl">
-                  Business-First Technology Delivery.
-                </h2>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--landing-muted)]">
+                <p className="max-w-2xl text-lg leading-8 text-[var(--landing-muted)]">
                   Rather than stacking disconnected tools and vendors, TitanCore combines delivery tracks into one more confident roadmap.
                 </p>
 
                 <div className="mt-8 grid gap-4">
                   {overviewChecks.map((item, index) => (
-                    <div
-                      key={item}
+                    <Link
+                      key={item.title}
+                      href={item.href}
                       data-reveal="zoom"
                       style={{ transitionDelay: `${index * 100}ms` }}
-                      className="flex items-start gap-4 rounded-[1.7rem] border border-black/6 bg-[rgba(255,250,244,0.85)] px-5 py-4 shadow-[0_16px_44px_rgba(17,32,51,0.05)] backdrop-blur-sm"
+                      className="group relative flex items-center gap-4 rounded-[1.7rem] border border-black/6 bg-[rgba(255,250,244,0.85)] px-5 py-4 shadow-[0_16px_44px_rgba(17,32,51,0.05)] backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-[var(--landing-accent-soft)] hover:bg-white hover:shadow-[0_20px_60px_rgba(17,32,51,0.12)]"
                     >
-                      <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--landing-accent-soft)] text-[var(--landing-accent)]">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--landing-accent-soft)] text-[var(--landing-accent)] transition-colors group-hover:bg-[var(--landing-accent)] group-hover:text-white">
                         <Check className="h-4 w-4" />
                       </div>
-                      <p className="text-sm leading-7 text-[var(--landing-muted)]">{item}</p>
-                    </div>
+                      <div className="flex-1 pr-12 text-left">
+                        <p className="text-sm font-bold text-[var(--landing-brand-strong)]">
+                          {item.title}: <span className="font-normal text-[var(--landing-muted)]">{item.description}</span>
+                        </p>
+                      </div>
+                      <div className="absolute right-6 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-[var(--landing-accent)]/20 bg-white p-2 text-[var(--landing-accent)] opacity-0 shadow-sm transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[var(--landing-accent)] group-hover:text-white group-hover:opacity-100">
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
+                    </Link>
                   ))}
                 </div>
 
@@ -593,7 +641,7 @@ export default function Home() {
                   style={{ transitionDelay: `${index * 100}ms` }}
                   className="relative pt-12"
                 >
-                  <article className="group relative h-full rounded-[2.2rem] border border-black/6 bg-white px-7 pb-8 pt-16 text-center text-[var(--landing-brand-strong)] shadow-[0_24px_64px_rgba(17,32,51,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(29,65,96,0.4)] hover:bg-[linear-gradient(180deg,#1d4160_0%,#0d1b2b_100%)] hover:text-white hover:shadow-[0_30px_72px_rgba(13,27,43,0.18)]">
+                  <article className="group relative flex h-full flex-col rounded-[2.2rem] border border-black/6 bg-white px-7 pb-8 pt-16 text-center text-[var(--landing-brand-strong)] shadow-[0_24px_64px_rgba(17,32,51,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(29,65,96,0.4)] hover:bg-[linear-gradient(180deg,#1d4160_0%,#0d1b2b_100%)] hover:text-white hover:shadow-[0_30px_72px_rgba(13,27,43,0.18)]">
                     <div className="absolute left-1/2 top-0 h-24 w-24 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[1.6rem] border-4 border-[var(--landing-surface)] bg-white shadow-[0_18px_44px_rgba(17,32,51,0.12)]">
                       <Image
                         src={card.image}
@@ -605,19 +653,21 @@ export default function Home() {
                       />
                     </div>
 
-                    <p
-                      className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[var(--landing-accent)] transition-colors duration-300 group-hover:text-white/70"
-                    >
-                      {card.eyebrow}
-                    </p>
-                    <h3 className="mt-4 font-[family:var(--font-space-grotesk)] text-3xl font-semibold leading-tight tracking-[-0.05em]">
-                      {card.title}
-                    </h3>
-                    <p className="mt-4 text-sm leading-7 text-[var(--landing-muted)] transition-colors duration-300 group-hover:text-white/78">
-                      {card.description}
-                    </p>
+                    <div>
+                      <p
+                        className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[var(--landing-accent)] transition-colors duration-300 group-hover:text-white/70"
+                      >
+                        {card.eyebrow}
+                      </p>
+                      <h3 className="mt-4 font-[family:var(--font-space-grotesk)] text-3xl font-semibold leading-tight tracking-[-0.05em]">
+                        {card.title}
+                      </h3>
+                      <p className="mt-4 text-sm leading-7 text-[var(--landing-muted)] transition-colors duration-300 group-hover:text-white/78">
+                        {card.description}
+                      </p>
+                    </div>
 
-                    <div className="mt-8 border-t border-black/5 pt-8 text-left transition-colors duration-300 group-hover:border-white/10">
+                    <div className="mt-auto border-t border-black/5 pt-8 text-left transition-colors duration-300 group-hover:border-white/10">
                       <p className="text-[0.65rem] font-bold uppercase tracking-[0.24em] text-[var(--landing-muted)] transition-colors duration-300 group-hover:text-white/52">
                         Expected Outcomes
                       </p>
@@ -633,16 +683,16 @@ export default function Home() {
                           </div>
                         ))}
                       </div>
-                    </div>
 
-                    <div className="mt-10 text-left">
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 text-sm font-bold text-[var(--landing-accent)] transition-all hover:gap-3"
-                      >
-                        Launch a similar project
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      <div className="mt-8">
+                        <Link
+                          href="/contact"
+                          className="inline-flex items-center gap-2 text-sm font-bold text-[var(--landing-accent)] transition-all hover:gap-3"
+                        >
+                          Launch a similar project
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
                     </div>
                   </article>
                 </div>
