@@ -5,8 +5,9 @@ import { ArrowRight } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products' },
-  { label: 'Equipment', href: '/#equipment' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Insights', href: '/#insights' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -20,19 +21,19 @@ export default function LandingFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <p className="font-[family:var(--font-space-grotesk)] text-2xl font-semibold tracking-[-0.05em]">
-              Jenko Coffee
+              TitanCore
             </p>
             <p className="mt-4 max-w-xs text-sm leading-7 text-white/74">
-              Premium roasts and professional equipment solutions for retail and fast-paced environments.
+              Business-focused technology delivery across websites, software, POS systems, marketing, and support.
             </p>
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-white/52">Why Jenko Coffee?</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-white/52">Why TitanCore?</p>
             <div className="mt-4 space-y-3 text-sm text-white/76">
-              <p>Premium Quality Roasts.</p>
-              <p>Reliable Equipment.</p>
-              <p>Foot Traffic Growth.</p>
+              <p>POS Systems.</p>
+              <p>Custom Software.</p>
+              <p>Website Design & Build.</p>
             </div>
           </div>
 
@@ -50,7 +51,7 @@ export default function LandingFooter() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/52">
-          © 2026 Jenko Coffee. All rights reserved. Powered by <Link href="https://cyberdreams.net" className='text-white hover:underline'>Cyber Dreams</Link>
+          © 2026 TitanCore (Pvt) Ltd. All rights reserved. Powered by <Link href="https://cyberdreams.net" className='text-white hover:underline'>Cyber Dreams</Link>
         </div>
       </div>
     </footer>

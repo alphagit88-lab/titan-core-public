@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Jenko Coffee | Premium Roasts & Equipment",
-  description: "Premium coffee distribution and professional equipment solutions for businesses.",
+  title: "TitanCore (Pvt) Ltd | The Power Behind Smart Business",
+  description: "Business-focused technology delivery across websites, software, POS systems, marketing, and support.",
 };
 
 export default function RootLayout({

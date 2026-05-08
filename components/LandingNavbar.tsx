@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ScanLine, Printer, Coffee, Zap } from 'lucide-react';
+import { Menu, X, ScanLine, Printer, Monitor, Zap } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products' },
-  { label: 'Equipment', href: '/#equipment' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Insights', href: '/#insights' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -30,12 +31,12 @@ export default function LandingNavbar() {
       <div className="bg-[#0d1b2b] text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-white/80">
-            <Coffee className="h-4 w-4 text-[#5f9ea0]" />
-            Premium coffee roasts & professional equipment
+            <Monitor className="h-4 w-4 text-[#5f9ea0]" />
+            Business technology delivery for growing teams
           </div>
           <div className="hidden items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white/88 backdrop-blur md:flex">
             <Zap className="h-4 w-4 text-[#c86c49]" />
-            Full-service distribution
+            Full-stack delivery
           </div>
         </div>
       </div>
@@ -45,8 +46,8 @@ export default function LandingNavbar() {
           <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setMenuOpen(false)}>
             <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
               <Image
-                src="/lgoNewWeb.jpeg"
-                alt="Jenko Coffee logo"
+                src="/logon.jpeg"
+                alt="TitanCore logo"
                 fill
                 sizes="48px"
                 priority
@@ -55,10 +56,10 @@ export default function LandingNavbar() {
             </div>
             <div className="min-w-0">
               <p className="truncate font-[family:var(--font-space-grotesk)] text-xl font-bold tracking-[-0.05em] text-[#0d1b2b]">
-                Jenko Coffee
+                TitanCore
               </p>
               <p className="truncate text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#5b6778]">
-                Roasts. Equipment. Service.
+                The Power Behind Smart Business.
               </p>
             </div>
           </Link>

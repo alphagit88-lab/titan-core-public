@@ -12,26 +12,23 @@ import {
   ChevronLeft,
   ChevronRight,
   Menu,
-  Coffee,
   Zap,
   ShieldCheck,
   Truck,
   Award,
-  Smile,
-  Thermometer,
+  Monitor,
+  Globe,
+  BarChart3,
   X,
 } from 'lucide-react';
 import LandingNavbar from '@/components/LandingNavbar';
 import LandingFooter from '@/components/LandingFooter';
-import image1 from '@/src/sld1.jpeg';
+import image1 from '@/public/landing/analytics-laptop.jpg';
 import image2 from '@/src/sld2.jpeg';
 import image3 from '@/src/sld3.jpeg';
-import image4 from '@/src/sld1.jpeg';
+import image4 from '@/public/landing/pos-planning.jpg';
 import image5 from '@/src/sld2.jpeg';
 import image6 from '@/src/sld3.jpeg';
-import sld1 from '@/src/sld1.jpeg';
-import sld2 from '@/src/sld2.jpeg';
-import sld3 from '@/src/sld3.jpeg';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -58,113 +55,105 @@ const heroSlides: Array<{
   eyebrow: string;
   title: string;
   description: string;
-  image: StaticImageData;
-  alt: string;
 }> = [
     {
-      eyebrow: 'Premium Beverage Solutions',
-      title: 'The Ultimate Destination for C-Store Coffee.',
+      eyebrow: 'Technology Delivery',
+      title: 'The Power Behind Smart Business.',
       description:
-        'Premium roasts, reliable equipment, and flavors your customers will keep coming back for.',
-      image: sld1,
-      alt: 'Freshly brewed premium coffee in a professional c-store setting.',
+        'TitanCore helps growing businesses simplify operations with dependable POS systems, custom software, and long-term IT support.',
     },
     {
-      eyebrow: 'Texas-Sized Variety',
-      title: 'Elevate Your Beverage Program.',
-      description: 'From Bold Dark Roast to Texas Pecan, we provide the variety that drives morning foot traffic.',
-      image: sld2,
-      alt: 'A variety of coffee blends and roasts displayed in a modern cafe environment.',
+      eyebrow: 'Business-First Planning',
+      title: 'Responsive Experiences Built to Grow.',
+      description: 'Interfaces stay sharp and usable across desktop, tablet, and mobile touchpoints — shaped for real workflow needs.',
     },
     {
-      eyebrow: 'Professional Equipment',
-      title: 'Smart Solutions, Bold Flavor.',
-      description: 'Professional-grade cappuccino and coffee machines tailored for the fast-paced retail environment.',
-      image: sld3,
-      alt: 'High-end cappuccino and coffee machines ready for retail use.',
+      eyebrow: 'Support After Launch',
+      title: 'Smart Solutions, Lasting Impact.',
+      description: 'TitanCore stays close with practical guidance, maintenance, and next-phase improvements after every launch.',
     },
   ];
 
 const proofTags = [
-  'Colombian & Texas Pecan',
-  'Artisan Cappuccinos',
-  'High-Volume Equipment',
+  'POS Systems',
+  'Custom Software',
+  'Website Design & Build',
 ];
 
 const overviewChecks = [
-  'Colombian: A classic, medium-bodied brew with a smooth finish.',
-  'Texas Pecan: A local favorite with rich, nutty undertones.',
-  'Dark Roast: Deep, bold, and intense for those who need a serious wake-up call.',
-  'Artisan Cappuccinos: Creamy, frothy, and available in a variety of flavors.',
+  'POS Systems: Modern point-of-sale rollouts for smoother billing and cleaner reporting.',
+  'Software Development: Custom tools that turn repetitive workflows into streamlined digital systems.',
+  'Website Design & Build: Responsive sites with stronger structure and a more confident visual presence.',
+  'Digital Marketing: Campaign planning and performance-minded execution for business growth.',
 ];
 
 const statCards = [
   {
-    value: '15+',
-    label: 'Premium Blends',
-    description: 'Curated selection of roasts and flavors designed for high-traffic environments.',
-    icon: Coffee,
-  },
-  {
-    value: '24/7',
-    label: 'Reliable Support',
-    description: 'Round-the-clock service to ensure your beverage program never skips a beat.',
+    value: '50+',
+    label: 'Projects Delivered',
+    description: 'Across POS, software, web, and marketing for growing businesses.',
     icon: Zap,
   },
   {
-    value: '99%',
-    label: 'Cup Consistency',
-    description: 'Precision brewing parameters for the perfect taste in every single cup.',
+    value: '5',
+    label: 'Core Services',
+    description: 'POS, software, websites, digital growth, and support — one coordinated stack.',
+    icon: ShieldCheck,
+  },
+  {
+    value: '100%',
+    label: 'Client Focused',
+    description: 'Every recommendation starts with workflow pain points and measurable priorities.',
     icon: Award,
   },
 ];
 
 const reasons = [
   {
-    title: 'Full-Service Partnership',
-    description: 'From machine installation to regular bean delivery, we handle the details so you can run your business.',
+    title: 'One Coordinated Stack',
+    description: 'POS, software, websites, digital growth, and support can work together instead of in silos.',
   },
   {
-    title: 'Increased Foot Traffic',
-    description: 'A high-quality coffee program is the #1 way to build a loyal "regular" customer base.',
+    title: 'Designed for Every Screen',
+    description: 'Layouts are mobile-friendly first, then expanded for tablet and desktop without losing clarity.',
   },
   {
-    title: 'Modern Branding',
-    description: 'Our sleek, eye-catching signage and decals enhance your store’s interior aesthetic.',
+    title: 'Built for the Next Phase',
+    description: 'TitanCore prioritizes maintainable systems, clear structure, and room for operational growth.',
   },
 ];
 
 const serviceCards = [
   {
-    eyebrow: 'Performance',
-    title: 'High-Volume Gear',
-    description: 'Built to handle the morning rush without slowing down.',
+    eyebrow: 'Strategy',
+    title: 'Retail Command Center',
+    description: 'A cleaner operational layer for checkout speed, stock awareness, and better daily reporting.',
     image: image5,
-    alt: 'High-volume coffee machine for retail environments.',
+    alt: 'Retail POS command center dashboard for operations.',
     featured: false,
   },
   {
-    eyebrow: 'Interface',
-    title: 'User-Friendly',
-    description: 'Simple for customers to use and easy for staff to maintain.',
+    eyebrow: 'Digital',
+    title: 'Service Brand Relaunch',
+    description: 'A mobile-first website focused on stronger trust signals, better messaging, and lead capture.',
     image: image3,
-    alt: 'Interactive touchscreen interface on a modern coffee machine.',
+    alt: 'Mobile-first service brand website redesign.',
     featured: false,
   },
   {
-    eyebrow: 'Quality',
-    title: 'Precision Brewing',
-    description: 'Precision temperature and mixing for the perfect taste every time.',
+    eyebrow: 'Automation',
+    title: 'Operations Desk',
+    description: 'A tailored internal workspace that reduces spreadsheet juggling and steadies operations.',
     image: image2,
-    alt: 'Consistency in every cup with our precision equipment.',
+    alt: 'Internal operations automation workspace dashboard.',
     featured: false,
   },
   {
-    eyebrow: 'Variety',
-    title: 'Artisan Flavors',
-    description: 'Seasonal and staple flavors that drive loyal foot traffic.',
+    eyebrow: 'Growth',
+    title: 'Connected Growth',
+    description: 'Where disconnected apps create drag — and how a unified delivery roadmap changes pace.',
     image: image6,
-    alt: 'A selection of artisan cappuccino and coffee flavors.',
+    alt: 'Connected business growth strategy and analytics.',
     featured: true,
   },
 ];
@@ -309,24 +298,15 @@ export default function Home() {
         <section id="home" className="relative isolate overflow-hidden scroll-mt-32">
           <div className="relative min-h-[calc(100svh-116px)] bg-[var(--landing-brand-strong)]">
             <div className="absolute inset-0">
-              {heroSlides.map((slide, index) => (
-                <div
-                  key={slide.title}
-                  className={`absolute inset-0 transition-opacity duration-[1400ms] ${index === activeSlide ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
-                  <Image
-                    src={slide.image}
-                    alt={slide.alt}
-                    fill
-                    placeholder="blur"
-                    priority={index === 0}
-                    sizes="100vw"
-                    className={`object-cover object-center transition-transform duration-[7000ms] ease-out ${index === activeSlide ? 'scale-100' : 'scale-[1.08]'
-                      }`}
-                  />
-                </div>
-              ))}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover"
+              >
+                <source src="/videos/8170596-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_84%_20%,rgba(200,108,73,0.30),transparent_18%),linear-gradient(90deg,rgba(10,17,28,0.94)_0%,rgba(10,17,28,0.80)_44%,rgba(10,17,28,0.36)_74%,rgba(10,17,28,0.58)_100%)]" />
@@ -400,15 +380,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="overview" className="relative scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <section id="services" className="relative scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div data-reveal="left" className="relative min-h-[520px] sm:min-h-[620px]">
                 <div className="absolute left-0 top-0 w-[62%] overflow-hidden rounded-[2rem] border border-black/6 bg-white shadow-[0_30px_80px_rgba(17,32,51,0.10)]">
                   <div className="relative aspect-[4/5]">
                     <Image
-                      src={image2}
-                      alt="Delivery staff reviewing products and invoice paperwork inside a store."
+                      src={image1}
+                      alt="Business team reviewing analytics dashboard and project progress."
                       fill
                       placeholder="blur"
                       sizes="(min-width: 1024px) 26vw, 60vw"
@@ -421,7 +401,7 @@ export default function Home() {
                   <div className="relative aspect-[4/5]">
                     <Image
                       src={image4}
-                      alt="Delivery worker standing beside a vehicle with portable printer and stacked supplies."
+                      alt="Developer workspace with code editor and responsive design layouts."
                       fill
                       placeholder="blur"
                       sizes="(min-width: 1024px) 25vw, 56vw"
@@ -432,26 +412,26 @@ export default function Home() {
 
                 <div className="absolute bottom-[9%] left-[8%] max-w-[16rem] rounded-[1.8rem] border border-[var(--landing-accent-soft)] bg-[var(--landing-surface)] p-5 shadow-[0_20px_50px_rgba(17,32,51,0.08)]">
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--landing-accent)]">
-                    Direct Service
+                    Full-Stack Delivery
                   </p>
                   <p className="mt-3 font-[family:var(--font-space-grotesk)] text-3xl font-semibold tracking-[-0.05em] text-[var(--landing-brand-strong)]">
-                    Reliable Roasts.
+                    Reliable Systems.
                   </p>
                   <p className="mt-2 text-sm leading-7 text-[var(--landing-muted)]">
-                    Our team ensures your station is always stocked with fresh beans and fully operational equipment.
+                    Our team ensures your operations are always running with the latest tools and fully operational technology.
                   </p>
                 </div>
               </div>
 
               <div data-reveal="right">
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--landing-accent)]">
-                  The Jenko standard
+                  The TitanCore standard
                 </p>
                 <h2 className="mt-4 max-w-[13ch] font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-5xl">
-                  Premium Roasts & Flavors.
+                  Business-First Technology Delivery.
                 </h2>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--landing-muted)]">
-                  We believe that convenience should never compromise quality. Our signature lineup is designed for the modern palate.
+                  Rather than stacking disconnected tools and vendors, TitanCore combines delivery tracks into one more confident roadmap.
                 </p>
 
                 <div className="mt-8 grid gap-4">
@@ -477,8 +457,8 @@ export default function Home() {
                         <Truck className="h-5 w-5" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-[var(--landing-brand-strong)]">Reliable Supply</p>
-                        <p className="text-sm text-[var(--landing-muted)]">On-time bean delivery.</p>
+                        <p className="text-sm font-semibold text-[var(--landing-brand-strong)]">Dependable Delivery</p>
+                        <p className="text-sm text-[var(--landing-muted)]">On-time project milestones.</p>
                       </div>
                     </div>
                   </div>
@@ -489,7 +469,7 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-[var(--landing-brand-strong)]">Consistent Quality</p>
-                        <p className="text-sm text-[var(--landing-muted)]">Precision brewing every time.</p>
+                        <p className="text-sm text-[var(--landing-muted)]">Polished handoff every time.</p>
                       </div>
                     </div>
                   </div>
@@ -521,14 +501,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="workflow" className="scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <section id="insights" className="scroll-mt-32 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div data-reveal="left" className="relative overflow-hidden rounded-[2.4rem] border border-black/6 bg-[var(--landing-brand-strong)] shadow-[0_28px_80px_rgba(17,32,51,0.16)]">
                 <div className="relative aspect-[5/6]">
                   <Image
                     src={image3}
-                    alt="Driver arranging products and supplies inside a retail aisle."
+                    alt="Team collaborating on technology solutions in a modern workspace."
                     fill
                     placeholder="blur"
                     sizes="(min-width: 1024px) 38vw, 100vw"
@@ -540,13 +520,13 @@ export default function Home() {
 
               <div data-reveal="right">
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--landing-accent)]">
-                  Why Choose Jenko Coffee?
+                  Why Choose TitanCore?
                 </p>
                 <h2 className="mt-4 max-w-[12ch] font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-5xl">
-                  Fueling your business growth.
+                  Strategy to support, in one flow.
                 </h2>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--landing-muted)]">
-                  We handle the details of your beverage program so you can focus on running your business.
+                  TitanCore combines planning, design, implementation, and post-launch care in one delivery flow.
                 </p>
 
                 <div className="mt-8 space-y-5">
@@ -576,7 +556,7 @@ export default function Home() {
                     <div>
                       <p className="font-semibold text-[var(--landing-brand-strong)]">Built to stay simple</p>
                       <p className="mt-2 text-sm leading-7 text-[var(--landing-muted)]">
-                        Drivers, stores, and invoices stay connected in one simple flow.
+                        Discovery, planning, implementation, and support stay connected in one clear roadmap.
                       </p>
                     </div>
                   </div>
@@ -586,21 +566,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="scroll-mt-32 px-4 pb-20 pt-4 sm:px-6 lg:px-8 lg:pb-24">
+        <section id="work" className="scroll-mt-32 px-4 pb-20 pt-4 sm:px-6 lg:px-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center" data-reveal="zoom">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--landing-accent)]">
-                Equipment
+                Services
               </p>
               <h2 className="mt-4 font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-5xl">
-                Reliable Equipment Solutions.
+                Reliable Technology Solutions.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[var(--landing-muted)]">
-                The powerhouse behind your counter, built for performance and consistency.
+                The full-stack behind your business, built for performance and growth.
               </p>
             </div>
 
-            <div id="equipment" className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
               {serviceCards.map((card, index) => (
                 <div
                   key={card.title}
@@ -641,17 +621,17 @@ export default function Home() {
         <section className="bg-[var(--landing-brand-strong)] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-5xl text-center" data-reveal="zoom">
             <h2 className="font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
-              Ready to Upgrade Your Coffee Station?
+              Ready to Simplify Your Operations?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-white/72 sm:text-xl">
-              Take the first step toward a superior beverage program that drives traffic and loyalty.
+              Take the first step toward a smarter, more connected business built on dependable technology.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--landing-accent)] px-8 py-4 text-base font-bold text-white shadow-[0_20px_50px_rgba(200,108,73,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(200,108,73,0.4)]"
               >
-                Contact Us for a Consultation
+                Start Your Project
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
