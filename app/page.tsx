@@ -24,11 +24,12 @@ import {
 import LandingNavbar from '@/components/LandingNavbar';
 import LandingFooter from '@/components/LandingFooter';
 import image1 from '@/public/landing/analytics-laptop.jpg';
-import image2 from '@/src/sld2.jpeg';
-import image3 from '@/src/sld3.jpeg';
 import image4 from '@/public/landing/pos-planning.jpg';
-import image5 from '@/src/sld2.jpeg';
-import image6 from '@/src/sld3.jpeg';
+import imageInsights from '@/public/images/insights/planing.jpg';
+import workRetail from '@/public/images/works/retail center.jpg';
+import workRelaunch from '@/public/images/works/service relaunch.webp';
+import workAutomation from '@/public/images/works/automation.png';
+import workGrowth from '@/public/images/works/growth.webp';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -128,33 +129,37 @@ const serviceCards = [
     eyebrow: 'Strategy',
     title: 'Retail Command Center',
     description: 'A cleaner operational layer for checkout speed, stock awareness, and better daily reporting.',
-    image: image5,
+    image: workRetail,
     alt: 'Retail POS command center dashboard for operations.',
     featured: false,
+    outcomes: ['Faster counter workflows', 'Sharper inventory visibility', 'Less manual reconciliation'],
   },
   {
     eyebrow: 'Digital',
     title: 'Service Brand Relaunch',
     description: 'A mobile-first website focused on stronger trust signals, better messaging, and lead capture.',
-    image: image3,
+    image: workRelaunch,
     alt: 'Mobile-first service brand website redesign.',
     featured: false,
+    outcomes: ['Sharper mobile presentation', 'Clearer conversion paths', 'More consistent brand feel'],
   },
   {
     eyebrow: 'Automation',
     title: 'Operations Desk',
     description: 'A tailored internal workspace that reduces spreadsheet juggling and steadies operations.',
-    image: image2,
+    image: workAutomation,
     alt: 'Internal operations automation workspace dashboard.',
     featured: false,
+    outcomes: ['Fewer repetitive tasks', 'Better internal visibility', 'Smoother team handoffs'],
   },
   {
     eyebrow: 'Growth',
     title: 'Connected Growth',
     description: 'Where disconnected apps create drag — and how a unified delivery roadmap changes pace.',
-    image: image6,
+    image: workGrowth,
     alt: 'Connected business growth strategy and analytics.',
     featured: true,
+    outcomes: ['Integrated data flow', 'Unified operational view', 'Scalable performance tracking'],
   },
 ];
 
@@ -507,7 +512,7 @@ export default function Home() {
               <div data-reveal="left" className="relative overflow-hidden rounded-[2.4rem] border border-black/6 bg-[var(--landing-brand-strong)] shadow-[0_28px_80px_rgba(17,32,51,0.16)]">
                 <div className="relative aspect-[5/6]">
                   <Image
-                    src={image3}
+                    src={imageInsights}
                     alt="Team collaborating on technology solutions in a modern workspace."
                     fill
                     placeholder="blur"
@@ -570,7 +575,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center" data-reveal="zoom">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[var(--landing-accent)]">
-                Services
+                Works
               </p>
               <h2 className="mt-4 font-[family:var(--font-space-grotesk)] text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-[var(--landing-brand-strong)] sm:text-5xl">
                 Reliable Technology Solutions.
@@ -611,6 +616,34 @@ export default function Home() {
                     <p className="mt-4 text-sm leading-7 text-[var(--landing-muted)] transition-colors duration-300 group-hover:text-white/78">
                       {card.description}
                     </p>
+
+                    <div className="mt-8 border-t border-black/5 pt-8 text-left transition-colors duration-300 group-hover:border-white/10">
+                      <p className="text-[0.65rem] font-bold uppercase tracking-[0.24em] text-[var(--landing-muted)] transition-colors duration-300 group-hover:text-white/52">
+                        Expected Outcomes
+                      </p>
+                      <div className="mt-4 space-y-3">
+                        {(card as any).outcomes?.map((outcome: string) => (
+                          <div key={outcome} className="flex items-center gap-3 rounded-full border border-black/[0.03] bg-black/[0.02] px-4 py-2 transition-colors duration-300 group-hover:border-white/10 group-hover:bg-white/5">
+                            <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--landing-accent)]/20 text-[var(--landing-accent)] transition-colors duration-300 group-hover:border-white/20 group-hover:text-white">
+                              <Check className="h-3 w-3" />
+                            </div>
+                            <span className="text-[0.825rem] font-medium leading-tight tracking-tight text-[var(--landing-brand-strong)] transition-colors duration-300 group-hover:text-white/90">
+                              {outcome}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-10 text-left">
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 text-sm font-bold text-[var(--landing-accent)] transition-all hover:gap-3"
+                      >
+                        Launch a similar project
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
                   </article>
                 </div>
               ))}

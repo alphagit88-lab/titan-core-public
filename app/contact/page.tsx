@@ -26,10 +26,10 @@ export default function ContactPage() {
                   Get in Touch
                 </p>
                 <h1 className="mt-6 font-[family:var(--font-space-grotesk)] text-5xl font-bold tracking-[-0.06em] text-[#0d1b2b] sm:text-7xl">
-                  Ready to Upgrade?
+                  Ready to Scale?
                 </h1>
                 <p className="mt-8 text-lg leading-8 text-[#5b6778]">
-                  Contact us today for a professional consultation. We'll help you design the perfect beverage program tailored for your fast-paced retail environment.
+                  Contact us today for a strategic technology consultation. We'll help you design a roadmap tailored for your operations and growth.
                 </p>
 
                 <div className="mt-12 space-y-8">
@@ -49,7 +49,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-[#5b6778]">Email Us</p>
-                      <p className="text-xl font-bold text-[#0d1b2b]">hello@jenkocoffee.com</p>
+                      <p className="text-xl font-bold text-[#0d1b2b]">hello@titancore.tech</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-6">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <div className="h-10 w-10 rounded-full bg-[#ead2c3] flex items-center justify-center">
                     <MessageSquare className="h-5 w-5 text-[#c86c49]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0d1b2b]">Consultation Request</h3>
+                  <h3 className="text-2xl font-bold text-[#0d1b2b]">Project Inquiry</h3>
                 </div>
                 
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -79,8 +79,8 @@ export default function ContactPage() {
                       <input type="text" placeholder="John Doe" className="w-full rounded-2xl border-none bg-[#f5efe7] px-5 py-4 text-sm focus:ring-2 focus:ring-[#c86c49]" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-wider text-[#5b6778]">Business Name</label>
-                      <input type="text" placeholder="Star C-Store" className="w-full rounded-2xl border-none bg-[#f5efe7] px-5 py-4 text-sm focus:ring-2 focus:ring-[#c86c49]" />
+                      <label className="text-xs font-bold uppercase tracking-wider text-[#5b6778]">Company Name</label>
+                      <input type="text" placeholder="TitanCore Client" className="w-full rounded-2xl border-none bg-[#f5efe7] px-5 py-4 text-sm focus:ring-2 focus:ring-[#c86c49]" />
                     </div>
                   </div>
                   <div className="space-y-2">
